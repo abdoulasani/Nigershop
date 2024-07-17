@@ -299,6 +299,13 @@ h1 .text-primary {
   font-size: 1.5rem; /* Adjust size as needed */
 }
 
+/* Active menu item color */
+.nav-item.active, 
+.nav-item:hover {
+  background-color: #28a745; /* Green color */
+  color: #fff; /* Optional: Change text color to white for contrast */
+}
+
 pre {
   margin-top: 0;
   margin-bottom: 1rem;
