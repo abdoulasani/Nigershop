@@ -286,6 +286,18 @@ h1 .text-primary {
 .fa-phone-alt.text-primary.mr-3 {
   color: #28a745 !important; /* Change color to green */
 }
+/* Back to Top button styling */
+.btn.back-to-top {
+  background-color: transparent; /* Make the background transparent */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding for a clean look */
+}
+
+/* Change icon color to black */
+.btn.back-to-top i {
+  color: #000; /* Black color for the icon */
+  font-size: 1.5rem; /* Adjust size as needed */
+}
 
 pre {
   margin-top: 0;
