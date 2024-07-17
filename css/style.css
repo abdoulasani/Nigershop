@@ -271,6 +271,22 @@ h1 .text-primary {
 .fas.fa-check {
   color: #28a745 !important; /* Change color to green */
 }
+
+/* Caractéristiques Début icons */
+.container-fluid.pt-5 .fa-check,
+.container-fluid.pt-5 .fa-shipping-fast,
+.container-fluid.pt-5 .fas.fa-exchange-alt,
+.container-fluid.pt-5 .fa-phone-volume {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* Contact icons */
+.fa-map-marker-alt.text-primary.mr-3,
+.fa-envelope.text-primary.mr-3,
+.fa-phone-alt.text-primary.mr-3 {
+  color: #28a745 !important; /* Change color to green */
+}
+
 pre {
   margin-top: 0;
   margin-bottom: 1rem;
