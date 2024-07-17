@@ -36,6 +36,7 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+
 *,
 *::before,
 *::after {
@@ -180,6 +181,96 @@ samp {
   font-size: 1em;
 }
 
+/* Change all icons to green */
+.fa {
+  color: #28a745 !important; /* Change color to green */
+}
+/* Search icon */
+.input-group-text .fa-search {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* Love icon */
+.btn .fas.fa-heart {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* Cart icon */
+.btn .fas.fa-shopping-cart {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* Categories background */
+.btn.bg-primary,
+.btn.bg-primary:active,
+.btn.bg-primary:focus,
+.btn.bg-primary:hover {
+  background-color: #28a745 !important; /* Change background color to green */
+  border-color: #28a745 !important; /* Change border color to green */
+}
+
+/* Achetez maintenant background */
+.btn-primary {
+  background-color: #28a745 !important; /* Change background color to green */
+  border-color: #28a745 !important; /* Change border color to green */
+}
+
+/* Social media background */
+.row.bg-secondary.py-2 {
+  background-color: #28a745 !important; /* Change background color to green */
+}
+
+
+/* Niger text */
+h1 .text-primary {
+  color: #28a745 !important; /* Change text color to green */
+}
+
+/* Voir Détail icon */
+.btn .fa-eye {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* View icon */
+.btn .fa-eye {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* Email icon */
+.fa-envelope,
+.fas.fa-envelope {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* Location icon */
+.fa-map-marker-alt,
+.fas.fa-map-marker-alt {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* Call icon */
+.fa-phone,
+.fas.fa-phone {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* Delivery icon */
+.fa-truck,
+.fas.fa-truck {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* Return Order icon */
+.fa-undo,
+.fas.fa-undo {
+  color: #28a745 !important; /* Change color to green */
+}
+
+/* Quality Product or Validated icon */
+.fa-check,
+.fas.fa-check {
+  color: #28a745 !important; /* Change color to green */
+}
 pre {
   margin-top: 0;
   margin-bottom: 1rem;
