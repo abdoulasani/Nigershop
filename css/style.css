@@ -180,24 +180,23 @@ samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
-
-/* Change all icons to green */
+/* Change all icons to orange */
 .fa {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 /* Search icon */
 .input-group-text .fa-search {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Love icon */
 .btn .fas.fa-heart {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Cart icon */
 .btn .fas.fa-shopping-cart {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Categories background */
@@ -205,71 +204,70 @@ samp {
 .btn.bg-primary:active,
 .btn.bg-primary:focus,
 .btn.bg-primary:hover {
-  background-color: #28a745 !important; /* Change background color to green */
-  border-color: #28a745 !important; /* Change border color to green */
+  background-color: #E47911 !important; /* Change background color to orange */
+  border-color: #E47911 !important; /* Change border color to orange */
 }
 
 /* Achetez maintenant background */
 .btn-primary {
-  background-color: #28a745 !important; /* Change background color to green */
-  border-color: #28a745 !important; /* Change border color to green */
+  background-color: #E47911 !important; /* Change background color to orange */
+  border-color: #E47911 !important; /* Change border color to orange */
 }
 
 /* Social media background */
 .row.bg-secondary.py-2 {
-  background-color: #28a745 !important; /* Change background color to green */
+  background-color: #E47911 !important; /* Change background color to orange */
 }
-
 
 /* Niger text */
 h1 .text-primary {
-  color: #28a745 !important; /* Change text color to green */
+  color: #E47911 !important; /* Change text color to orange */
 }
 
 /* Voir Détail icon */
 .btn .fa-eye {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* View icon */
 .btn .fa-eye {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Email icon */
 .fa-envelope,
 .fas.fa-envelope {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Location icon */
 .fa-map-marker-alt,
 .fas.fa-map-marker-alt {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Call icon */
 .fa-phone,
 .fas.fa-phone {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Delivery icon */
 .fa-truck,
 .fas.fa-truck {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Return Order icon */
 .fa-undo,
 .fas.fa-undo {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Quality Product or Validated icon */
 .fa-check,
 .fas.fa-check {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Caractéristiques Début icons */
@@ -277,14 +275,14 @@ h1 .text-primary {
 .container-fluid.pt-5 .fa-shipping-fast,
 .container-fluid.pt-5 .fas.fa-exchange-alt,
 .container-fluid.pt-5 .fa-phone-volume {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 
 /* Contact icons */
 .fa-map-marker-alt.text-primary.mr-3,
 .fa-envelope.text-primary.mr-3,
 .fa-phone-alt.text-primary.mr-3 {
-  color: #28a745 !important; /* Change color to green */
+  color: #E47911 !important; /* Change color to orange */
 }
 /* Back to Top button styling */
 .btn.back-to-top {
@@ -302,7 +300,7 @@ h1 .text-primary {
 /* Active menu item color */
 .nav-item.active, 
 .nav-item:hover {
-  background-color: #28a745; /* Green color */
+  background-color: #E47911; /* Orange color */
   color: #fff; /* Optional: Change text color to white for contrast */
 }
 
