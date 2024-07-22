@@ -23,6 +23,11 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -86,159 +91,206 @@
     </div>
     <!-- Topbar End -->
 
-
-    
-        <div class="col-lg-9">
-            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                <a href="" class="text-decoration-none d-block d-lg-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">Niger</span>Shop</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav mr-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Accueil</a>
-                        </div>
-                     
-                    <div class="navbar-nav ml-auto py-0">
-                    </div>
+    <!-- Navbar Start -->
+    <div class="col-lg-9">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+            <a href="" class="text-decoration-none d-block d-lg-none">
+                <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">Niger</span>Shop</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Accueil</a>
                 </div>
-            </nav>
-        </div>
+                <div class="navbar-nav ml-auto py-0">
+                </div>
+            </div>
+        </nav>
     </div>
     <!-- Navbar End -->
 
-
-   <!-- Page Header Start -->
-<div class="container-fluid bg-secondary mb-5">
-    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
-        <h2 class="font-weight-semi-bold text-uppercase mb-3">Chemises</h2>
-        <div class="d-inline-flex">
-            <p>Chemise 100% Coton, très légère et lisse</p>
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-secondary mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+            <h2 class="font-weight-semi-bold text-uppercase mb-3">Chemises</h2>
+            <div class="d-inline-flex">
+                <p>Chemise 100% Coton, très légère et lisse</p>
+            </div>
         </div>
     </div>
-</div>
-<!-- Page Header End -->
+    <!-- Page Header End -->
 
-<!-- Product Section Start -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="card product-item border-0 mb-4">
-                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                    <img class="img-fluid w-100" src="img/Chemise/C1.jpg" alt="">
-                </div>
-                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                    <h6 class="text-truncate mb-3">Chemise Stylée Colorée</h6>
-                    <div class="d-flex justify-content-center">
-                        <h6>5.000F</h6>
-                        <h6 class="text-muted ml-2"><del>6.000F</del></h6>
+    <!-- Product Section Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Product Item Start -->
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="card product-item border-0 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/C1.jpg" alt="">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Chemise Stylée Colorée</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>5.000F</h6>
+                            <h6 class="text-muted ml-2"><del>6.000F</del></h6>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
+                        <a href="javascript:void(0);" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chemise Stylée Colorée" data-price="5000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
                     </div>
                 </div>
-                <div class="card-footer d-flex justify-content-between bg-light border">
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Ajouter au Panier</a>
+            </div>
+            <!-- Product Item End -->
+
+            <!-- Repeat for other products with updated details -->
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="card product-item border-0 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/C2.jpg" alt="">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Chemise Stylée Colorée</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>5.000F</h6>
+                            <h6 class="text-muted ml-2"><del>6.000F</del></h6>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
+                        <a href="javascript:void(0);" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chemise Stylée Colorée" data-price="5000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="card product-item border-0 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/C3.jpg" alt="">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Chemise Stylée Colorée</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>5.000F</h6>
+                            <h6 class="text-muted ml-2"><del>6.000F</del></h6>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
+                        <a href="javascript:void(0);" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chemise Stylée Colorée" data-price="5000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="card product-item border-0 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/C4.jpg" alt="">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Chemise Stylée Colorée</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>5.000F</h6>
+                            <h6 class="text-muted ml-2"><del>6.000F</del></h6>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
+                        <a href="javascript:void(0);" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chemise Stylée Colorée" data-price="5000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="card product-item border-0 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/C4.jpg" alt="">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Chemise Stylée Colorée</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>5.000F</h6>
+                            <h6 class="text-muted ml-2"><del>6.000F</del></h6>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
+                        <a href="javascript:void(0);" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chemise Stylée Colorée" data-price="5000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="card product-item border-0 mb-4">
-                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                    <img class="img-fluid w-100" src="img/Chemise/C2.jpg" alt="">
-                </div>
-                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                    <h6 class="text-truncate mb-3">Chemise Stylée Colorée</h6>
-                    <div class="d-flex justify-content-center">
-                        <h6>5.000F</h6>
-                        <h6 class="text-muted ml-2"><del>6.000F</del></h6>
-                    </div>
-                </div>
-                <div class="card-footer d-flex justify-content-between bg-light border">
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Ajouter au Panier</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="card product-item border-0 mb-4">
-                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                    <img class="img-fluid w-100" src="img/Chemise/C3.jpg" alt="">
-                </div>
-                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                    <h6 class="text-truncate mb-3">Chemise Stylée Colorée</h6>
-                    <div class="d-flex justify-content-center">
-                        <h6>5.000F</h6>
-                        <h6 class="text-muted ml-2"><del>6.000F</del></h6>
-                    </div>
-                </div>
-                <div class="card-footer d-flex justify-content-between bg-light border">
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Ajouter au Panier</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="card product-item border-0 mb-4">
-                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                    <img class="img-fluid w-100" src="img/Chemise/C5.jpg" alt="">
-                </div>
-                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                    <h6 class="text-truncate mb-3">Chemise Stylée Colorée</h6>
-                    <div class="d-flex justify-content-center">
-                        <h6>5.000F</h6>
-                        <h6 class="text-muted ml-2"><del>6.000F</del></h6>
-                    </div>
-                </div>
-                <div class="card-footer d-flex justify-content-between bg-light border">
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Ajouter au Panier</a>
-                </div>
     </div>
-    <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-        <div class="card product-item border-0 mb-4">
-            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                <img class="img-fluid w-100" src="img/Chemise/C4.jpg" alt="">
-            </div>
-            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                <h6 class="text-truncate mb-3">Chemise Stylée Colorée</h6>
-                <div class="d-flex justify-content-center">
-                    <h6>5.000F</h6>
-                    <h6 class="text-muted ml-2"><del>6.000F</del></h6>
+    <!-- Product Section End -->
+
+    <!-- Purchase Modal Start -->
+    <div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="purchaseModalLabel">Finaliser votre achat</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="purchaseForm">
+                        <div class="form-group">
+                            <label for="deliveryAddress">Adresse de Livraison</label>
+                            <textarea class="form-control" id="deliveryAddress" rows="2" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Numéro de Téléphone</label>
+                            <input type="text" class="form-control" id="phoneNumber" value="+22799642302" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentMethod">Méthode de Paiement</label>
+                            <select class="form-control" id="paymentMethod" required>
+                                <option value="mynita">Mynita(Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed)</option>
+                                <option value="amanata">Amanata(Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed)</option>
+                                <option value="al_izza">Al Izza(Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed)</option>
+                                <option value="cash">Paiement à la Livraison</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary" id="confirmPurchase">Confirmer l'Achat</button>
                 </div>
             </div>
-            <div class="card-footer d-flex justify-content-between bg-light border">
-                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-                <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Ajouter au Panier</a>
-            </div>
-</div>
-<!-- Product Section End -->
+        </div>
+    </div>
+    <!-- Purchase Modal End -->
 
-<!-- Page Header End -->
+    <!-- Custom JavaScript for handling purchase process -->
+    <script>
+        $(document).ready(function() {
+            let selectedProduct = '';
+            let selectedPrice = '';
 
+            $('.buy-btn').on('click', function() {
+                selectedProduct = $(this).data('product');
+                selectedPrice = $(this).data('price');
+                $('#purchaseModal').modal('show');
+            });
 
+            $('#confirmPurchase').on('click', function() {
+                const address = $('#deliveryAddress').val();
+                const phoneNumber = $('#phoneNumber').val();
+                const paymentMethod = $('#paymentMethod').val();
 
+                if (address && phoneNumber && paymentMethod) {
+                    const message = `Bonjour Ghissa Mohamed, j'ai effectué le paiement pour les produits suivant: ${selectedProduct} pour ${selectedPrice}F. Adresse de Livraison: ${address}. Méthode de Paiement: ${paymentMethod}.  Je vous envoie le reçu de paiement pour votre confirmation, mon numéro de téléphone est: ${phoneNumber}.`; 
 
-   
+                    const whatsappUrl = `https://wa.me/+22799642302?text=${encodeURIComponent(message)}`;
+                    window.location.href = whatsappUrl;
+                }
+            });
+        });
+    </script>
 
-
-
-    <!-- Back to Top -->
-<a href="#" class="btn back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
-
 </html>
