@@ -223,6 +223,10 @@ samp {
 h1 .text-primary {
   color: #E47911 !important; /* Change text color to orange */
 }
+/* Shop text */
+.text-shop {
+  color: #008751 !important; /* Change text color to green */
+}
 
 /* Voir Détail icon */
 .btn .fa-eye {
