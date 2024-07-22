@@ -150,7 +150,7 @@
 
 
 
-  <!-- Contact Start -->
+  <!--<!-- Contact Start -->
 <div class="container-fluid pt-5">
     <div class="text-center mb-4">
         <h2 class="section-title px-5"><span class="px-2">Contactez-nous pour toute question</span></h2>
@@ -182,24 +182,43 @@
                         <p class="help-block text-danger"></p>
                     </div>
                     <div>
-                        <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Envoyer le message</button>
+                        <button class="btn btn-primary py-2 px-4" type="button" id="sendMessageButton">Envoyer le message</button>
                     </div>
                 </form>
             </div>
         </div>
         <div class="col-lg-5 mb-5">
-            <h5 class="font-weight-semi-bold mb-3">Prenez Contact</h5>
-            <p>Ecrivez nous.</p>
+            <h5 class="font-weight-semi-bold mb-3">Adresse</h5>
             <div class="d-flex flex-column mb-3">
                 <h5 class="font-weight-semi-bold mb-3">Niger Shop</h5>
                 <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Tahoua, Marche central, Niger</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>Nigershop@gmail.com</p>
                 <p class="mb-2"><i class="fa fa-phone-alt text-primary mr-3"></i>+227 99642302</p>
             </div>
         </div>
     </div>
 </div>
 <!-- Contact End -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('sendMessageButton').addEventListener('click', function() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+    
+            // Construct the message
+            var fullMessage = `Nom: ${name}\nEmail: ${email}\nSujet: ${subject}\nMessage: ${message}`;
+            
+            // WhatsApp URL with the message
+            var phoneNumber = '22799642302';
+            var whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
+            
+            // Redirect to WhatsApp
+            window.location.href = whatsappUrl;
+        });
+    });
+    </script>
+    
 
 
         </div>
