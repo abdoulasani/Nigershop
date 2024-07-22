@@ -58,13 +58,36 @@
                 </a>
             </div>
             <div class="col-lg-6 col-6 text-left">
-                <form action="">
+                <form action="" id="searchForm">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Rechercher des produits">
                         <div class="input-group-append">
                             <span class="input-group-text bg-transparent text-primary">
                                 <i class="fa fa-search"></i>
                             </span>
+                </form>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const searchInput = document.getElementById('searchInput');
+                        const productItems = document.querySelectorAll('.product-item');
+                        
+                        searchInput.addEventListener('keyup', function() {
+                            const query = searchInput.value.toLowerCase();
+                            
+                            productItems.forEach(function(item) {
+                                const productName = item.getAttribute('data-name').toLowerCase();
+                                
+                                if (productName.includes(query)) {
+                                    item.style.display = ''; // Show the product item
+                                } else {
+                                    item.style.display = 'none'; // Hide the product item
+                                }
+                            });
+                        });
+                    });
+                    </script>
+                    
+      
                         </div>
                     </div>
                 </form>
