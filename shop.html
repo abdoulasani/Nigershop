@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <!-- Topbar Start -->
+        <!-- Barre Supérieure Début -->
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
@@ -55,7 +55,19 @@
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a href="" class="text-decoration-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">Niger</span>Shop</h1>
+                    <h1 class="m-0 display-5 font-weight-semi-bold">
+     <span class="text-primary font-weight-bold border px-3 mr-1">Niger</span><span class="text-green">Shop</span>
+                    </h1>
+                    <style>/* Niger text */
+                        h1 .text-primary {
+                            color: #E47911 !important; /* Change text color to orange */
+                        }
+                        
+                        /* Shop text */
+                        .text-green {
+                            color: #008751 !important; /* Change text color to green */
+                        }
+                        </style>
                 </a>
             </div>
             <div class="col-lg-6 col-6 text-left">
@@ -82,10 +94,35 @@
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
-
-
+    <!-- Barre Supérieure Fin -->
+<style>/* Shop text */
+    .text-shop {
+      color: #008751 !important; /* Change text color to green */
+    }
+    </style>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        // Find all text nodes in the document
+        function highlightShopText(node) {
+            if (node.nodeType === 3) { // Node is a text node
+                var text = node.nodeValue;
+                var replacedText = text.replace(/Shop/g, '<span class="text-shop">Shop</span>');
+                if (replacedText !== text) {
+                    var span = document.createElement('span');
+                    span.innerHTML = replacedText;
+                    node.parentNode.replaceChild(span, node);
+                }
+            } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') { // Node is an element node
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    highlightShopText(node.childNodes[i]);
+                }
+            }
+        }
+    
+        highlightShopText(document.body);
+    });
+    </script>
    
+    
     </div>    
         <div class="col-lg-9">
             <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
