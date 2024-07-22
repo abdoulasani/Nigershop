@@ -24,7 +24,32 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
+<style>/* Shop text */
+    .text-shop {
+      color: #008751 !important; /* Change text color to green */
+    }
+    </style>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        // Find all text nodes in the document
+        function highlightShopText(node) {
+            if (node.nodeType === 3) { // Node is a text node
+                var text = node.nodeValue;
+                var replacedText = text.replace(/Shop/g, '<span class="text-shop">Shop</span>');
+                if (replacedText !== text) {
+                    var span = document.createElement('span');
+                    span.innerHTML = replacedText;
+                    node.parentNode.replaceChild(span, node);
+                }
+            } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') { // Node is an element node
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    highlightShopText(node.childNodes[i]);
+                }
+            }
+        }
+    
+        highlightShopText(document.body);
+    });
+    </script>
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid">
