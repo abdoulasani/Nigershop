@@ -862,4 +862,200 @@
         // Add event listeners when the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', addShowDescriptionListeners);
     </script>
-    
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-secondary mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+            <h2 class="font-weight-semi-bold text-uppercase mb-3">Collection Jabah hommes</h2>
+            <div class="d-inline-flex">
+                <p>Disponible.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+            <div class="card product-item border-0 mb-4">
+                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                    <img class="img-fluid w-100" src="img/P10.png" alt="">
+                </div>
+                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                    <h6 class="text-truncate mb-3">Jabah pour homme</h6>
+                    <div class="d-flex justify-content-center">
+                        <h6>11.000F</h6><h6 class="text-muted ml-2"><del>17.000F</del></h6>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light border">
+                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
+                    <a href="#" class="btn btn-sm text-dark p-0 acheter" data-product="Jabah pour homme" data-price="11000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Order Modal Start -->
+    <div id="orderModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Finaliser la Commande</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm">
+                        <div class="mb-3">
+                            <label for="productQuantity" class="form-label">Quantité</label>
+                            <input type="number" class="form-control" id="productQuantity" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="totalPrice" class="form-label">Prix Total</label>
+                            <input type="text" class="form-control" id="totalPrice" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Adresse</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom et Prénom</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Pays de Livraison</label>
+                            <input type="text" class="form-control" id="country" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">Ville</label>
+                            <input type="text" class="form-control" id="city" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quarter" class="form-label">Quartier</label>
+                            <input type="text" class="form-control" id="quarter" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Numéro de Téléphone</label>
+                            <input type="text" class="form-control" id="phone" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="continueOrder">Continuer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Order Modal End -->
+
+    <!-- Payment Modal Start -->
+    <div id="paymentModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Choisir Méthode de Paiement</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="paymentForm">
+                        <div class="mb-3">
+                            <label for="paymentMethod" class="form-label">Méthode de Paiement</label>
+                            <select class="form-control" id="paymentMethod" required>
+                                <option value="mynita">Mynita (Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed)</option>
+                                <option value="amanata">Amanata (Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed)</option>
+                                <option value="al_izza">Al Izza (Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed)</option>
+                                <option value="cash">Paiement à la Livraison</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <p id="paymentInstructions"></p>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="completePayment">Paiement Terminé</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Payment Modal End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Custom Script -->
+    <script>
+        $(document).ready(function() {
+            let selectedProduct = {};
+            let checkoutData = {};
+
+            // Event delegation to handle click event on all 'Acheter' buttons
+            $(document).on('click', '.acheter', function(e) {
+                e.preventDefault();
+                selectedProduct.name = $(this).data('product');
+                selectedProduct.price = parseInt($(this).data('price'));
+
+                $('#productQuantity').val(1);
+                $('#totalPrice').val(selectedProduct.price + ' CFA');
+                $('#orderModal').modal('show');
+            });
+
+            // When quantity is changed
+            $('#productQuantity').on('input', function() {
+                const quantity = parseInt($(this).val());
+                const totalPrice = selectedProduct.price * quantity;
+                $('#totalPrice').val(totalPrice + ' CFA');
+            });
+
+            // When 'Continuer' is clicked
+            $('#continueOrder').on('click', function() {
+                checkoutData.quantity = $('#productQuantity').val();
+                checkoutData.totalPrice = $('#totalPrice').val();
+                checkoutData.address = $('#address').val();
+                checkoutData.name = $('#name').val();
+                checkoutData.country = $('#country').val();
+                checkoutData.city = $('#city').val();
+                checkoutData.quarter = $('#quarter').val();
+                checkoutData.phone = $('#phone').val();
+
+                $('#orderModal').modal('hide');
+                $('#paymentModal').modal('show');
+            });
+
+            // When 'Paiement Terminé' is clicked
+            $('#completePayment').on('click', function() {
+                checkoutData.paymentMethod = $('#paymentMethod').val();
+                const message = `Salut j'ai effectué le paiement pour les produits: ${selectedProduct.name} (${checkoutData.quantity}). Mon adresse de livraison: ${checkoutData.address}, ${checkoutData.quarter}, ${checkoutData.city}, ${checkoutData.country}. Je vous envoie le reçu de paiement pour votre confirmation.`;
+
+                window.location.href = `https://wa.me/22799642302?text=${encodeURIComponent(message)}`;
+            });
+
+            // Update payment instructions based on the selected payment method
+            $('#paymentMethod').on('change', function() {
+                const method = $(this).val();
+                let instructions = '';
+
+                switch (method) {
+                    case 'mynita':
+                        instructions = 'Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed via Mynita.';
+                        break;
+                    case 'amanata':
+                        instructions = 'Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed via Amanata.';
+                        break;
+                    case 'al_izza':
+                        instructions = 'Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed via Al Izza.';
+                        break;
+                    case 'cash':
+                        instructions = 'Paiement à la livraison: Vous paierez lors de la réception de la commande.';
+                        break;
+                    default:
+                        instructions = '';
+                }
+
+                $('#paymentInstructions').text(instructions);
+            });
+        });
+    </script>
+</body>
+
+</html>
