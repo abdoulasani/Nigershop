@@ -178,6 +178,7 @@
         </div>
     </div>
 </div>
+
 <!-- Product Carousel -->
 <div class="col-lg-12 col-md-12 col-sm-12 pb-1">
     <div class="card product-item border-0 mb-4">
@@ -268,16 +269,6 @@
                     </div>
                 </div>
 
-                <!-- Carousel Item 9 -->
-                <div class="carousel-item">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/Chemise/P9.jpg" alt="Product 3">
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 3"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
-                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-                    </div>
-                </div>
 
                 
                 <!-- Add more carousel items as needed -->
@@ -305,9 +296,9 @@
     </div>
 </div>
 
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
 <script>
 $(document).ready(function() {
     let totalPrice = 0;
@@ -340,280 +331,358 @@ $(document).ready(function() {
             return;
         }
 
-        let message = 'Détails de la commande:\n' + selectedProducts.join('\n') + '\nPrix total: ' + totalPrice + ' F CFA';
-        let whatsappUrl = 'https://wa.me/22799642302?text=' + encodeURIComponent(message);
-        window.location.href = whatsappUrl;
+        $('#purchaseModal').modal('show');
+    });
+
+    // Handle purchase confirmation
+    $('#confirmPurchase').on('click', function() {
+        const address = $('#deliveryAddress').val();
+        const phoneNumber = $('#phoneNumber').val();
+        const paymentMethod = $('#paymentMethod').val();
+    
+        if (address && phoneNumber && paymentMethod) {
+            const message = `Bonjour Ghissa Mohamed, j'ai effectué le paiement pour les produits suivants: ${selectedProducts.join(', ')} pour ${totalPrice}F. Adresse de Livraison: ${address}. Méthode de Paiement: ${paymentMethod}. Je vous envoie le reçu de paiement pour votre confirmation, mon numéro de téléphone est: ${phoneNumber}.`;
+    
+            const whatsappUrl = `https://wa.me/+22799642302?text=${encodeURIComponent(message)}`;
+            window.location.href = whatsappUrl;
+        } else {
+            alert('Veuillez remplir tous les champs du formulaire.');
+        }
     });
 });
 </script>
 
 
-<!-- Product 9 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+
+<!-- Product Carousel jean -->
+<div class="col-lg-12 col-md-12 col-sm-12 pb-1">
     <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P9.jpg" alt="">
+        <div id="productCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P9.jpg" alt="Product 1">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 1"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P10.jpg" alt="Product 2">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 2"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 3 -->
+                <div class="carousel-item">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P11.jpg" alt="Product 3">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 3"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+                 <!-- Carousel Item 4 -->
+                <div class="carousel-item">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P12.jpg" alt="Product 3">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 3"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+
+                <!-- Carousel Item 5 -->
+                <div class="carousel-item">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P13.jpg" alt="Product 3">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 3"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+
+                 <!-- Carousel Item 5 -->
+                <div class="carousel-item">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P14.jpg" alt="Product 3">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 3"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+
+                  
+                <!-- Add more carousel items as needed -->
+            </div>
+            <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon Jean</h6>
+            <h6 class="text-truncate mb-3">Pantalon Jean </h6>
             <div class="d-flex justify-content-center">
-                <h6>7.000F</h6><h6 class="text-muted ml-2"><del>6.000F</del></h6>
+                <h6>7.000F</h6><h6 class="text-muted ml-2"><del>8.000F</del></h6>
             </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
         </div>
     </div>
 </div>
-</div>
-</div>
-<!-- Produits Fin -->
-
-<!-- Product 10 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-    <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P10.jpg" alt="">
-        </div>
-        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon Jean</h6>
-            <div class="d-flex justify-content-center">
-                <h6>7.000F</h6><h6 class="text-muted ml-2"><del>6.000F</del></h6>
-            </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-        </div>
+<div class="col-lg-12 col-md-12 col-sm-12 pb-1">
+    <div id="totalPriceDiv" class="text-right font-weight-bold">
+        Prix total: <span id="totalPrice">0</span> F CFA
     </div>
 </div>
-</div>
-</div>
-<!-- Produits Fin -->
-
-<!-- Product 11 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-    <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P11.jpg" alt="">
+<!-- Purchase Modal Start -->
+<div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="purchaseModalLabel">Finaliser votre achat</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
-        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon Jean</h6>
-            <div class="d-flex justify-content-center">
-                <h6>7.000F</h6><h6 class="text-muted ml-2"><del>6.000F</del></h6>
-            </div>
+        <div class="modal-body">
+            <form id="purchaseForm">
+                <div class="form-group">
+                    <label for="deliveryAddress">Adresse de Livraison</label>
+                    <textarea class="form-control" id="deliveryAddress" rows="2" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Numéro de Téléphone</label>
+                    <input type="text" class="form-control" id="phoneNumber" value="+22799642302" required>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Méthode de Paiement</label>
+                    <select class="form-control" id="paymentMethod" required>
+                        <option value="mynita">Mynita (Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed)</option>
+                        <option value="amanata">Amanata (Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed)</option>
+                        <option value="al_izza">Al Izza (Veuillez payer sur le numéro suivant: +22799642302, nom Ghissa Mohamed)</option>
+                        <option value="cash">Paiement à la Livraison</option>
+                    </select>
+                </div>
+            </form>
         </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<!-- Produits Fin -->
-
-<!-- Product 12 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-    <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P12.jpg" alt="">
-        </div>
-        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon Jean</h6>
-            <div class="d-flex justify-content-center">
-                <h6>7.000F</h6><h6 class="text-muted ml-2"><del>6.000F</del></h6>
-            </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="cancelButton" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-primary" id="confirmPurchase">Confirmer l'Achat</button>
         </div>
     </div>
-</div>
-</div>
-</div>
-<!-- Produits Fin -->
-
-
-<!-- Product 13 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-    <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P13.jpg" alt="">
-        </div>
-        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon Jean</h6>
-            <div class="d-flex justify-content-center">
-                <h6>7.000F</h6><h6 class="text-muted ml-2"><del>6.000F</del></h6>
-            </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-        </div>
     </div>
-</div>
-</div>
-</div>
-<!-- Produits Fin -->
-
-
-<!-- Product 14 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-    <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P14.jpg" alt="">
-        </div>
-        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon Jean</h6>
-            <div class="d-flex justify-content-center">
-                <h6>7.000F</h6><h6 class="text-muted ml-2"><del>6.000F</del></h6>
-            </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-        </div>
     </div>
-</div>
-</div>
-</div>
-<!-- Produits Fin -->
+    <!-- Purchase Modal End -->
+    <script>
+        $(document).ready(function(){
+            $("#cancelButton").on("click", function() {
+                // Close the modal
+                let modal = $(this).closest('.modal');
+                modal.modal('hide');
+        
+                // Redirect to the previous page
+                window.history.back();
+            });
+        });
+        </script>
+    <!-- Custom JavaScript for handling purchase process -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    let selectedProduct = '';
+    let selectedPrice = '';
+    
+    $('.buy-btn').on('click', function() {
+        selectedProduct = $(this).data('product');
+        selectedPrice = $(this).data('price');
+        $('#purchaseModal').modal('show');
+    });
+    
+    $('#confirmPurchase').on('click', function() {
+        const address = $('#deliveryAddress').val();
+        const phoneNumber = $('#phoneNumber').val();
+        const paymentMethod = $('#paymentMethod').val();
+    
+        if (address && phoneNumber && paymentMethod) {
+            const message = `Bonjour Ghissa Mohamed, j'ai effectué le paiement pour les produits suivant: ${selectedProduct} pour ${selectedPrice}F. Adresse de Livraison: ${address}. Méthode de Paiement: ${paymentMethod}. Je vous envoie le reçu de paiement pour votre confirmation, mon numéro de téléphone est: ${phoneNumber}.`; 
+    
+            const whatsappUrl = `https://wa.me/+22799642302?text=${encodeURIComponent(message)}`;
+            window.location.href = whatsappUrl;
+        }
+    });
+    });
+    </script>
 
-<!-- Product 15 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+
+<!-- Product Carousel jean -->
+<div class="col-lg-12 col-md-12 col-sm-12 pb-1">
     <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P15.jpg" alt="">
+        <div id="productCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P15.jpg" alt="Product 1">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 1"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P16.jpg" alt="Product 2">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 2"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+                <!-- Carousel Item 3 -->
+                <div class="carousel-item">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P17.jpg" alt="Product 3">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 3"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+                 <!-- Carousel Item 4 -->
+                <div class="carousel-item">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P18.jpg" alt="Product 3">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 3"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+
+                <!-- Carousel Item 5 -->
+                <div class="carousel-item">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P19.jpg" alt="Product 3">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 3"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+
+                 <!-- Carousel Item 5 -->
+                <div class="carousel-item">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="img/Chemise/P20.jpg" alt="Product 3">
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <button class="btn btn-sm text-dark p-0 select-btn" data-price="6000" data-name="Chemise Marque Italy Pallo M Icheal - Color 3"><i class="fas fa-shopping-cart text-primary mr-1"></i>Sélectionner</button>
+                        <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-price="6000"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
+                    </div>
+                </div>
+
+                  
+                <!-- Add more carousel items as needed -->
+            </div>
+            <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon carole</h6>
+            <h6 class="text-truncate mb-3">Pantalon carole </h6>
             <div class="d-flex justify-content-center">
                 <h6>8.000F</h6><h6 class="text-muted ml-2"><del>9.000F</del></h6>
             </div>
         </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-        </div>
     </div>
 </div>
-</div>
-</div>
-<!-- Produits Fin -->
-
- <!-- Product 16 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-    <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P16.jpg" alt="">
-        </div>
-        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon carole</h6>
-            <div class="d-flex justify-content-center">
-                <h6>8.000F</h6><h6 class="text-muted ml-2"><del>9.000F</del></h6>
-            </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-        </div>
+<div class="col-lg-12 col-md-12 col-sm-12 pb-1">
+    <div id="totalPriceDiv" class="text-right font-weight-bold">
+        Prix total: <span id="totalPrice">0</span> F CFA
     </div>
 </div>
-</div>
-</div>
-<!-- Produits Fin -->
 
-<!-- Product 16 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-    <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P17.jpg" alt="">
-        </div>
-        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon carole</h6>
-            <div class="d-flex justify-content-center">
-                <h6>8.000F</h6><h6 class="text-muted ml-2"><del>9.000F</del></h6>
-            </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<!-- Produits Fin -->
 
-<!-- Product 18 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-    <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P18.jpg" alt="">
-        </div>
-        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon carole</h6>
-            <div class="d-flex justify-content-center">
-                <h6>8.000F</h6><h6 class="text-muted ml-2"><del>9.000F</del></h6>
-            </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<!-- Produits Fin -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
-<!-- Product 19 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-    <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P19.jpg" alt="">
-        </div>
-        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon carole</h6>
-            <div class="d-flex justify-content-center">
-                <h6>8.000F</h6><h6 class="text-muted ml-2"><del>9.000F</del></h6>
-            </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<!-- Produits Fin -->
+<script>
+$(document).ready(function() {
+    let totalPrice = 0;
+    let selectedProducts = [];
 
-<!-- Product 20 -->
-<div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-    <div class="card product-item border-0 mb-4">
-        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-            <img class="img-fluid w-100" src="img/Chemise/P20.jpg" alt="">
-        </div>
-        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-            <h6 class="text-truncate mb-3">Pantalon carole</h6>
-            <div class="d-flex justify-content-center">
-                <h6>8.000F</h6><h6 class="text-muted ml-2"><del>9.000F</del></h6>
-            </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light border">
-            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Voir Détail</a>
-            <a href="#" class="btn btn-sm text-dark p-0 buy-btn" data-product="Chargeur portable" data-price="7.000F"><i class="fas fa-shopping-cart text-primary mr-1"></i>Acheter</a>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<!-- Produits Fin -->
+    // Handle product selection
+    $('.select-btn').on('click', function() {
+        const price = parseInt($(this).data('price'));
+        const productName = $(this).data('name');
 
+        if ($(this).hasClass('selected')) {
+            $(this).removeClass('selected btn-success').addClass('btn-primary').text('Sélectionner');
+            totalPrice -= price;
+            selectedProducts = selectedProducts.filter(product => product !== productName);
+        } else {
+            $(this).addClass('selected btn-success').removeClass('btn-primary').text('Sélectionné');
+            totalPrice += price;
+            selectedProducts.push(productName);
+        }
+
+        $('#totalPrice').text(totalPrice);
+    });
+
+    // Handle "Acheter" button click
+    $('.buy-btn').on('click', function(event) {
+        event.preventDefault();
+
+        if (totalPrice === 0) {
+            alert('Veuillez sélectionner au moins un produit.');
+            return;
+        }
+
+        $('#purchaseModal').modal('show');
+    });
+
+    // Handle purchase confirmation
+    $('#confirmPurchase').on('click', function() {
+        const address = $('#deliveryAddress').val();
+        const phoneNumber = $('#phoneNumber').val();
+        const paymentMethod = $('#paymentMethod').val();
+    
+        if (address && phoneNumber && paymentMethod) {
+            const message = `Bonjour Ghissa Mohamed, j'ai effectué le paiement pour les produits suivants: ${selectedProducts.join(', ')} pour ${totalPrice}F. Adresse de Livraison: ${address}. Méthode de Paiement: ${paymentMethod}. Je vous envoie le reçu de paiement pour votre confirmation, mon numéro de téléphone est: ${phoneNumber}.`;
+    
+            const whatsappUrl = `https://wa.me/+22799642302?text=${encodeURIComponent(message)}`;
+            window.location.href = whatsappUrl;
+        } else {
+            alert('Veuillez remplir tous les champs du formulaire.');
+        }
+    });
+});
+</script>
+
+
+<!-- Purchase Modal Start -->
+
+ 
 
 <!-- Purchase Modal Start -->
 <div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
